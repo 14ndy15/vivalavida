@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#ff914d">
+        <title>Welcome | Viva la Vida</title>
+        <script type="application/ld+json">
+            {
+                "image" : "https://r-cf.bstatic.com/images/hotel/max500/200/200652496.jpg",
+                "@context" : "http://schema.org",
+                "url" : "https://www.booking.com/hotel/cu/viva-la-vida.html",
+                "name" : "Hotel Boutique Viva la Vida",
+                "hasMap" : "https://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7c23.1353834,-82.3911762&zoom=15&center=23.1353834,-82.3911762&sensor=false&size=1600x1200&client=gme-booking&channel=booking-frontend&signature=WoSJCxP1bJFd6K-P4kvxU70HRZo=",
+                "description" : "Located 3 miles from La Bodeguita del Medio, Hotel Boutique Viva la Vida has accommodations with a bar, a garden and a 24-hour front desk for your...",
+                "address" : {
+                    "postalCode" : "10400",
+                    "addressLocality" : "Calle 21 507ª e/ Calle D y E, Vedado, Plaza de la Revolución",
+                    "addressCountry" : "Cuba",
+                    "streetAddress" : "Calle 21 507ª e/ Calle D y E, Vedado, Plaza de la Revolución, Vedado, 10400 Havana, Cuba",
+                    "@type" : "PostalAddress",
+                    "addressRegion" : "Ciudad de La Habana Province"
+                },
+                "priceRange" : "Prices for upcoming dates start at US$45 per night (We Price Match)",
+                "@type" : "Hotel"
+            }
+        </script>
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

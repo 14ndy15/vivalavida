@@ -1,0 +1,13 @@
+.btn{
+    background: $mainOrange;
+    border-radius: 1px;
+    padding: .5em 1em;
+    color: white;
+    margin: .5em;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include atLarge{
+        padding: .75em 1.25em;
+    }
+}

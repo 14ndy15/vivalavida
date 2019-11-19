@@ -1,0 +1,100 @@
+<section id="contact" class="section contact">
+
+    <div class="section__title">
+        <h2>Contact</h2>
+    </div>
+
+    <div class="contact__message">
+
+        <h3>Leave us a message</h3>
+
+        <form action="{{ asset('mail.php') }}" class="form">
+            <div class="form__item">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form__item">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form__item">
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" cols="20" rows="5" required></textarea>
+            </div>
+            <div class="form__item"
+                 data-sal="slide-left"
+                 data-sal-easing="ease-in-bounce"
+                 data-sal-delay="500">
+                <input type="submit" id="submit" value="Send message">
+            </div>
+        </form>
+
+        <div class="contact__message__notification">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="contact__map">
+        <h3>We are here!</h3>
+
+        <div class="contact_map__image"
+             data-sal="flip-up"
+             data-sal-delay="300">
+            {{ imgTagContent(
+                asset('images/contact/map.png'),
+                '',
+                "100vw",
+                800)
+            | raw
+            }}
+        </div>
+    </div>
+
+    <div class="contact__info">
+        <h3>Also you can contact with us using</h3>
+
+        <div class="contact__info__data">
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="#airbnb" xlink:href="#airbnb"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="#facebook" xlink:href="#facebook"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.booking.com/hotel/cu/viva-la-vida.html?label=gen173nr-1DCAEoggI46AdIM1gEaDWIAQGYATG4ARfIAQ_YAQPoAQH4AQKIAgGoAgO4Aue_0O4FwAIB;sid=8b0a882b6d040a62655eb2f39cc036b1;dest_id=-1628751;dest_type=city;dist=0;from_beach_non_key_ufi_sr=1;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1574182920;srpvid=1a7477c3a6b60048;type=total;ucfs=1&#hotelTmpl">
+                        <svg>
+                            <use href="#facebook" xlink:href="#facebook"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact__info__data">
+            <address>
+                Street 21 #507a Between D & E
+            </address>
+        </div>
+
+        <div class="contact__info__data">
+            <a href="tel://+5378375017">+53 7837-5017</a>
+        </div>
+
+        <div class="contact__info__data">
+            <a href="tel://+5353172247">+53 5317-2247</a>
+        </div>
+
+        <div class="contact__info__data">
+            <a href="mailto:vivalavida.cuba@gmail.com">vivalavida.cuba@gmail.com</a>
+        </div>
+    </div>
+</section>

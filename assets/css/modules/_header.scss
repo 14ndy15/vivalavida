@@ -1,0 +1,88 @@
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include atLarge{
+        justify-content: space-around;
+    }
+
+    &__logo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 5em;
+        margin: .25em .5em;
+
+        @include atLarge{
+            width: 6em;
+        }
+
+        & span {
+            &:first-child {
+                text-transform: uppercase;
+                color: $mainGrey;
+                font-size: 2em;
+                font-weight: 700;
+
+                @include atLarge{
+                    width: 2.5em;
+                }
+            }
+
+            &:last-child{
+                position: relative;
+                top: -.5em;
+                text-transform: uppercase;
+                color: $mainOrange;
+                font-size: 1.15em;
+                font-weight: 400;
+
+                @include atLarge{
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+
+    &__nav{
+        margin: auto .5em;
+
+        &--links{
+            @include atLarge{
+                width: 30%;
+
+                & ul li{
+                    margin: auto !important;
+                }
+            }
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+
+            & li{
+                display: inline;
+                margin: auto .4em;
+
+                & a{
+                    font-weight: 700;
+                    color: $mainGrey;
+
+                    & svg{
+                        width: 1.5em;
+                        height: 1.5em;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}

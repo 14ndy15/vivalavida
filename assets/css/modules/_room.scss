@@ -1,0 +1,138 @@
+.room{
+    position: relative;
+    display: grid !important;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    grid-template-areas:    "title"
+                            "description"
+                            "images"
+                            "text";
+
+    @include atLarge{
+        grid-template-areas: "title       images"
+                             "description images"
+                             "text        images";
+
+        grid-template-columns: 30% 70%;
+    }
+
+    &--inverse{
+        @include atLarge{
+            grid-template-areas: "images title      "
+                                 "images description"
+                                 "images text       ";
+
+            grid-template-columns: 70% 30%;
+            background-color: $mainGrey;
+
+            & p, & li, & h3{
+                color: white;
+            }
+
+            & svg{
+                fill: white !important;
+            }
+        }
+    }
+
+    &__title{
+        grid-area: title;
+        margin: 0 auto;
+
+        @include atLarge{
+            order: 1;
+        }
+    }
+
+
+    &__description{
+        grid-area: description;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include atLarge{
+            order: 2;
+        }
+
+        &__text{
+            width: 80%;
+        }
+
+        &__price{
+            width: 3em;
+            height: 3em;
+            background-color: $mainOrange;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+    }
+
+    &__images{
+        width: 100%;
+        grid-area: images;
+        overflow: hidden;
+
+        & img{
+            height: auto;
+        }
+
+
+    }
+
+    &__text{
+        width: 95%;
+        margin: auto auto 1em;
+        grid-area: text;
+
+        @include atLarge{
+            order: 3;
+            margin: 0 auto;
+        }
+
+        &__services{
+            width: 100%;
+
+            & h3{
+                text-align: center;
+                margin-bottom: 1em;
+            }
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                & li{
+                    display: inline;
+                    margin: .25em .5em;
+
+                    & svg{
+                        width: 3em;
+                        height: 3em;
+                        margin: auto;
+                        display: block;
+                        fill: $mainGrey;
+                    }
+                }
+            }
+        }
+
+        &__rent{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+}

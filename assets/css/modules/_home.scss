@@ -1,0 +1,94 @@
+.home{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__text{
+        width: 95%;
+        margin: 0 auto 2em;
+
+        @include atLarge{
+            width: 30%;
+            margin-bottom: 0;
+        }
+
+        &__services{
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                & li{
+                    display: inline;
+                    margin: .25em .5em;
+                    width: 45%;
+                    text-align: center;
+
+                    & svg{
+                        width: 3em;
+                        height: 3em;
+                        margin: auto;
+                        display: block;
+                        fill: $mainGrey;
+                    }
+                }
+            }
+        }
+
+        &__action{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &__images{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        @include atLarge{
+            width: 68%;
+        }
+
+        & img{
+            height: auto;
+
+            @include atLarge{
+                min-height: 100%;
+            }
+        }
+
+        &__decorator{
+            position: absolute;
+            bottom: 7.5em;
+            right: 7.5em;
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 7em;
+                height: 7em;
+                background: transparent;
+                border-right: 3px $mainOrange solid;
+                border-bottom: 3px $mainOrange solid;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                width: 4em;
+                height: 4em;
+                top: 2.5em;
+                left: 2.5em;
+                background: transparent;
+                border-right: 2px $mainOrange solid;
+                border-bottom: 2px $mainOrange solid;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,72 @@
+.hero{
+    position: relative;
+
+    &__image{
+        overflow: hidden;
+        width: 100vw;
+        height: 85vh;
+
+        @include atLarge{
+            height: 90vh;
+        }
+    }
+
+    &__content{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        @include atLarge{
+            width: 50%;
+        }
+
+        &__title{
+            & h1{
+                color: white;
+                padding: .5em .25em;
+                text-shadow: 2px 2px 8px rgba(black, .25);
+                text-align: center;
+
+                @include atLarge{
+                    font-size: 2.75em;
+                    text-shadow: none;
+                    background-color: rgba($mainGrey, .9);
+                    padding: .25em;
+                    text-align: left;
+                }
+            }
+        }
+
+        &__subtitle{
+            & h4{
+                font-size: 1.25em;
+                color: white;
+                padding: .5em;
+                text-shadow: 2px 2px 8px rgba(black, .25);
+                text-align: center;
+
+                @include atLarge{
+                    text-shadow: none;
+                    background-color: rgba($mainGrey, .9);
+                    padding: .25em;
+                    margin: .5em 0;
+                    text-align: left;
+                }
+            }
+        }
+
+        &__action{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            @include atLarge{
+                justify-content: start;
+                margin: 2em;
+            }
+        }
+
+    }
+}

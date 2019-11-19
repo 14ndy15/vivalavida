@@ -1,0 +1,71 @@
+<section id="home" class="section home">
+
+    <div class="home__text">
+        <div class="section__title">
+            <h2 data-sal="slide-down"
+                data-sal-delay="300">{{ home.title }}</h2>
+        </div>
+
+        {{ home.getLocale('text') | raw }}
+
+        <div class="home__text__services">
+            <ul>
+                <li
+                    data-sal="slide-up"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#security" xlink:href="#security"/>
+                    </svg>
+                    Securities cameras & Guard
+                </li>
+                <li data-sal="slide-up"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#bicycle" xlink:href="#bicycle"/>
+                    </svg>
+                    Byke rental
+                </li>
+                <li data-sal="slide-right"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#party" xlink:href="#party"/>
+                    </svg>
+                    Party organizer
+                </li>
+                <li data-sal="slide-left"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#legal" xlink:href="#legal"/>
+                    </svg>
+                    All rent documents in order
+                </li>
+            </ul>
+        </div>
+
+        <div class="home__text__action"
+             data-sal="slide-up"
+             data-sal-easing="ease-in-bounce"
+             data-sal-delay="500">
+            <a class="btn" href="#rooms">See Rooms</a>
+        </div>
+
+    </div>
+    <div class="home__images gallery">
+        {% for image in home.imagesGallery %}
+        {{ imgTagContent(
+            image.webPath,
+            '',
+            "(min-width:1200px) 66vw, 100vw",
+            1920)
+        | raw
+        }}
+        {% endfor %}
+
+        <span class="home__images__decorator"></span>
+    </div>
+
+</section>

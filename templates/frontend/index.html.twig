@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{{ include('/frontend/index/_icons.html.twig') }}
+
+{{ include('/frontend/index/_header.html.twig') }}
+<main>
+    {{ include('/frontend/index/_hero.html.twig') }}
+
+    {{ include('/frontend/index/_home.html.twig') }}
+
+    {{ include('/frontend/index/_rooms.html.twig') }}
+
+    {{ include('/frontend/index/_contact.html.twig') }}
+
+</main>
+{% endblock %}

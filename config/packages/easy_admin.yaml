@@ -1,0 +1,50 @@
+easy_admin:
+  site_name: 'Viva la Vida'
+  design:
+    brand_color: '#e23342'
+    form_theme:
+      - '@EasyAdmin/Form/bootstrap_4.html.twig'
+      - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+  formats:
+    date: 'd/m/Y'
+    time: 'H:i'
+    datetime: 'd/m/Y H:i'
+  entities:
+    # List the entity class name you want to manage
+    Room:
+      class: App\Entity\Room
+      label: Room
+      form:
+        title: 'Add or update a post'
+        fields:
+          - {property: title, label: 'Title'}
+          - {property: imagesGallery, label: 'Images galleries'}
+          - {property: position, label: 'Position'}
+          - {property: price, label: 'Price'}
+          - {property: textEn, type: fos_ckeditor, label: 'Description in English'}
+          - {property: textEs, type: fos_ckeditor, label: 'Description in Spanish'}
+          - {property: textDe, type: fos_ckeditor, label: 'Description in German'}
+
+      list:
+        title: Rooms
+        fields:
+          - {property: title, label: Title}
+          - {property: price, label: 'Price'}
+          - {property: position, label: 'Position'}
+          - {property: textEn, label: 'Description (EN)'}
+
+    ImageFile:
+      class: App\Entity\ImageFile
+      label: Images
+      form:
+        title: 'Add or update an image'
+        fields:
+          - {property: 'name', label: Name}
+          - {property: 'category', label: Category, help: 'Use for categorized content Ex: blog'}
+          - {property: 'file', type: file, label: 'Imagen'}
+      list:
+        title: 'Images'
+        fields:
+          - {property: 'name', label: Name}
+          - {property: 'category', label: Category}
+          - {property: 'getWebPath', label: Image, type: 'image'}

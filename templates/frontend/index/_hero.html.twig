@@ -1,0 +1,33 @@
+<section class="hero">
+    <div class="hero__image">
+        {{ imgTagContent(
+            asset('images/hero/hero_1.jpg'),
+            'view of the colonial house in vedado havana',
+            "100vw",
+            1920)
+        | raw
+        }}
+
+    </div>
+    <div class="hero__content">
+        <div class="hero__content__title">
+            <h1 data-sal="slide-left"
+                data-sal-delay="300">
+                Rent a colonial house
+                in the heart of Havana
+            </h1>
+        </div>
+
+        <div class="hero__content__subtitle">
+            <h4 data-sal="slide-right"
+                data-sal-delay="500">Vive La Vida in the <i>Vedado Habanero</i></h4>
+        </div>
+
+        <div class="hero__content__action"
+             data-sal="slide-up"
+             data-sal-delay="700">
+            <a href="#home" class="btn">See house</a>
+        </div>
+
+    </div>
+</section>

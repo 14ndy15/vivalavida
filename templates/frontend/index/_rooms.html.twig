@@ -1,0 +1,86 @@
+{% for room in rooms %}
+<section class="section section--decorator room room--{{ room.title | lower }} {% if loop.index % 2 == 1 %} room--inverse {% endif %}">
+
+    <div class="section__title room__title">
+        <h2>{{room.title}} Room</h2>
+    </div>
+    <div class="section__description room__description">
+        <div class="room__description__text">
+            {{ room.getLocale('text') | raw }}
+        </div>
+        <div class="room__description__price">
+            {{ room.price }} $
+        </div>
+    </div>
+
+    <div class="room__images gallery">
+        {% for image in room.imagesGallery %}
+            {{ imgTagContent(
+                image.webPath,
+                '',
+                "(min-width:1200px) 66vw, 100vw",
+                1920)
+            | raw
+            }}
+        {% endfor %}
+    </div>
+
+    <div class="room__text">
+
+        <div class="room__text__services">
+            <h3>Services</h3>
+
+            <ul>
+                <li data-sal="slide-up"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#towels" xlink:href="#towels"/>
+                    </svg>
+                    Toallas / Sabanas
+                </li>
+                <li data-sal="slide-up"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#air" xlink:href="#air"/>
+                    </svg>
+                    Air aconditioned
+                </li>
+                <li data-sal="slide-right"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#breakfast" xlink:href="#breakfast"/>
+                    </svg>
+                    Breakfeast
+                </li>
+                <li data-sal="slide-left"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#safety_box" xlink:href="#safety_box"/>
+                    </svg>
+                    Security Box
+                </li>
+                <li data-sal="slide-down"
+                    data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300">
+                    <svg>
+                        <use href="#minibar" xlink:href="#minibar"/>
+                    </svg>
+                    Minibar
+                </li>
+            </ul>
+        </div>
+
+        <div class="room__text__rent"
+             data-sal="slide-up"
+             data-sal-easing="ease-in-bounce"
+             data-sal-delay="500">
+            <a class="btn" href="#">Rent this room</a>
+        </div>
+    </div>
+
+</section>
+{% endfor %}

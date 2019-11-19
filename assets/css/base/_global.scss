@@ -1,0 +1,66 @@
+body{
+    position: relative;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    color: $mainGrey;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    display: block;
+    object-fit: cover;
+
+    &.blur-up {
+        filter: blur(8px);
+        transition: filter 600ms;
+
+        &.lazyloaded {
+            filter: blur(0);
+        }
+    }
+}
+
+*::selection {
+    color: white;
+    background: rgba($mainOrange, 0.7);
+}
+
+p, h3, h5, h6, input, textarea{
+    color: $mainGrey;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@include atLarge {
+
+    h1{
+        font-size: 2.75em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+h1{
+    font-weight: 700;
+}
+
+p{
+    @mixin atSmall {
+        line-height: 1.25;
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}

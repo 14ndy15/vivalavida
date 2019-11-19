@@ -1,0 +1,62 @@
+.gallery{
+    position: relative;
+
+    & img{
+        position: absolute;
+        top: 0;
+        transition: transform .3s ease-in-out;
+        max-height: 100vh;
+        min-height: 50vh;
+
+        &:first-child{
+            position: relative;
+        }
+
+        @include atLarge{
+            min-height: auto;
+        }
+
+        &:nth-child(1) {
+            transform: translateX(0%);
+        }
+        &:nth-child(3) {
+            transform: translateX(100%);
+        }
+        &:nth-child(5) {
+            transform: translateX(200%);
+        }
+        &:nth-child(7) {
+            transform: translateX(300%);
+        }
+        &:nth-child(9) {
+            transform: translateX(400%);
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        top: 50%;
+        border-radius: 50%;
+        z-index: 1;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url("/images/icons/arrow.svg");
+
+        &--prev{
+            left: .5em;
+            right: auto;
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        &--next{
+            right: .5em;
+            left: auto;
+            transform: translateY(-50%) rotate(0deg);
+        }
+    }
+
+}

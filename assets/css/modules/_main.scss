@@ -1,0 +1,54 @@
+main{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    & .section{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin: 1px auto;
+
+        &__title{
+            width: 90%;
+            color: $mainOrange;
+            text-align: center;
+
+            & h2{
+                margin-bottom: 0;
+
+                @include atLarge{
+                    margin-bottom: inherit;
+                }
+            }
+        }
+
+        &__description{
+            width: 90%;
+        }
+
+        &--decorator{
+            &::before{
+                position: absolute;
+                content: '';
+                width: 60%;
+                height: 1px;
+                margin: auto;
+                background-color: $mainOrange;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+
+            @include atLarge{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

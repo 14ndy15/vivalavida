@@ -1,0 +1,16 @@
+@import "~normalize.css";
+@import "~sal.js/dist/sal.css";
+@import "base/variables";
+@import "base/mixins";
+@import "base/global";
+
+@import "modules/btn";
+
+@import "modules/header";
+@import "modules/main";
+@import "modules/hero";
+@import "modules/gallery";
+@import "modules/home";
+@import "modules/room";
+@import "modules/contact";
+@import "modules/footer";
